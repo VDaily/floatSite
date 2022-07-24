@@ -393,7 +393,8 @@ html {
 }
 
 .btn {
-  padding: 19px 80px;
+  width: 236px;
+  padding: 19px 0px;
   color: #ffffff;
   background-color: #cea93a;
   border: none;
@@ -425,10 +426,14 @@ main {
   color: #000;
   border: 1px solid #0d89ca;
 }
-.aboutUs__img {
-  width: 525px;
-  height: 525px;
+.aboutUs__photo {
+  width: 41.015625%;
   float: right;
+  height: 525px;
+}
+.aboutUs__img {
+  max-width: 100%;
+  max-height: 100%;
 }
 .aboutUs__title-header {
   margin-top: 30px;
@@ -437,6 +442,7 @@ main {
   margin-top: 65px;
   font-size: 2.4rem;
   width: 614px;
+  margin-bottom: 40px;
 }
 
 .title-header {
