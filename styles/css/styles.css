@@ -356,7 +356,7 @@ html {
   max-width: 1440px;
   margin: 0 auto;
   height: 100%;
-  padding: 0 5.8565153734%;
+  padding: 0 5.5555555556%;
 }
 
 .logo {
@@ -398,6 +398,50 @@ html {
   background-color: #cea93a;
   border: none;
   font-size: 2rem;
+}
+
+main {
+  font-family: "Jost";
+  font-weight: 400;
+}
+
+.aboutUs {
+  height: 600px;
+  margin-top: 100px;
+}
+.aboutUs__content {
+  float: left;
+  width: 50%;
+}
+.aboutUs__btn_appearance-back-border {
+  border: 1px solid #0d89ca;
+  background-color: #0d89ca;
+}
+.aboutUs__btn {
+  margin-right: 50px;
+}
+.aboutUs__btn_appearance {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #0d89ca;
+}
+.aboutUs__img {
+  width: 525px;
+  height: 525px;
+  float: right;
+}
+.aboutUs__title-header {
+  margin-top: 30px;
+}
+.aboutUs__paragraph {
+  margin-top: 65px;
+  font-size: 2.4rem;
+  width: 614px;
+}
+
+.title-header {
+  font-size: 4.8rem;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=styles.css.map */
