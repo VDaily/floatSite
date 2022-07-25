@@ -6,8 +6,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.35;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /* Sections
@@ -42,9 +44,12 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /**
@@ -52,8 +57,10 @@ hr {
    * 2. Correct the odd `em` font sizing in all browsers.
    */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -70,9 +77,12 @@ a {
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
    */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
@@ -90,8 +100,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -141,10 +153,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.35;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -212,12 +228,18 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
@@ -240,8 +262,10 @@ textarea {
    */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -257,8 +281,10 @@ textarea {
    * 2. Correct the outline style in Safari.
    */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -273,8 +299,10 @@ textarea {
    * 2. Change font properties to `inherit` in Safari.
    */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -318,7 +346,7 @@ html {
   height: 890px;
 }
 .header__inner {
-  background: url("../../img/header/backImg.png"), rgb(5, 138, 204);
+  background: url("../../img/header/backImg.png"), #058acc;
   background-blend-mode: multiply;
   background-size: cover;
   height: 890px;
@@ -401,15 +429,19 @@ html {
   font-size: 2rem;
 }
 
-main {
+.main {
   font-family: "Jost";
   font-weight: 400;
 }
-
-.aboutUs {
-  height: 600px;
-  margin-top: 100px;
+.main__aboutUs {
+  overflow: auto;
+  padding: 50px 0;
+  margin-top: 50px;
 }
+.main__offerings {
+  padding: 50px 0;
+}
+
 .aboutUs__content {
   float: left;
   width: 50%;
@@ -439,15 +471,105 @@ main {
   margin-top: 30px;
 }
 .aboutUs__paragraph {
-  margin-top: 65px;
+  margin-top: 55px;
   font-size: 2.4rem;
   width: 614px;
-  margin-bottom: 40px;
 }
 
 .title-header {
   font-size: 4.8rem;
   font-weight: 400;
+}
+
+.offerings {
+  text-align: center;
+}
+.offerings__head {
+  text-align: center;
+}
+.offerings__paragraph {
+  font-size: 2rem;
+}
+.offerings__services {
+  margin-top: 70px;
+}
+.offerings__service:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+.offerings__service {
+  margin-right: 2.03125%;
+}
+.offerings__service:last-child {
+  margin-right: 0;
+}
+
+.service {
+  width: 20.3125%;
+  height: 300px;
+  float: left;
+  text-align: center;
+  background: rgba(162, 184, 193, 0.05);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
+  padding: 1.5625%;
+  position: relative;
+}
+.service_backcolor-orange:after {
+  content: "";
+  width: 50%;
+  height: 18px;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  background-color: #EB7B37;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.service_backcolor-yellow:after {
+  content: "";
+  width: 50%;
+  height: 18px;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  background-color: #FAD606;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.service_backcolor-gold:after {
+  content: "";
+  width: 50%;
+  height: 18px;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  background-color: #C6A136;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.service_backcolor-gray:after {
+  content: "";
+  width: 50%;
+  height: 18px;
+  position: absolute;
+  top: -28px;
+  left: 0;
+  background-color: #A2B8C1;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.service__title {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.service__img {
+  max-width: 100%;
+  max-height: 110px;
+}
+.service__paragraph {
+  font-size: 1.4rem;
+}
+.service__btn {
+  margin-top: 100px;
 }
 
 /*# sourceMappingURL=styles.css.map */

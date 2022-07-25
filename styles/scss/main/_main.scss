@@ -90,14 +90,20 @@ html {
   font-size: 2rem;
 }
 
-main {
+.main {
   font-family: "Jost";
   font-weight: 400;
+  
+  &__aboutUs {
+    overflow: auto;
+    padding: 50px 0;
+    margin-top: 50px;
+  }
+  &__offerings {
+    padding: 50px 0;
+  }
 }
 .aboutUs {
-  height: 600px;
-  margin-top: 100px;
-
   &__content {
     float: left;
     width: 50%;
@@ -120,7 +126,6 @@ main {
     height: 525px;
   }
   &__img {
-    // width: 525px;
     max-width: 100%;
     max-height: 100%;
   }
@@ -130,14 +135,109 @@ main {
   }
 
   &__paragraph {
-    margin-top: 65px;
+    margin-top: 55px;
     font-size: 2.4rem;
     width: 614px;
-    margin-bottom: 40px;
   }
 }
 
 .title-header {
   font-size: 4.8rem;
   font-weight: 400;
+}
+
+
+.offerings {
+  
+  text-align: center;
+  &__head {
+    text-align: center;
+  }
+
+  &__paragraph {
+    font-size: 2rem;
+  }
+  &__services {
+    margin-top: 70px;
+    
+  }
+  &__service:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+  }
+  &__service {
+    margin-right: 2.03125%;
+  }
+  &__service:last-child {
+    margin-right: 0;
+  }
+}
+
+
+.service {
+  width: 20.3125%;
+  height: 300px;
+  float: left;
+  text-align: center;
+  background: $serviceBackground;
+  box-shadow: $serviceBoxShadow;
+  padding: 1.5625%;
+  position: relative;
+  &_backcolor-orange:after {
+    content: "";
+    width: 50%;
+    height: 18px;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    background-color: $serviceAffter1;
+    box-shadow: $serviceBoxShadow;
+  }
+  &_backcolor-yellow:after {
+    content: "";
+    width: 50%;
+    height: 18px;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    background-color: $serviceAffter2;
+    box-shadow: $serviceBoxShadow;
+  }
+  &_backcolor-gold:after {
+    content: "";
+    width: 50%;
+    height: 18px;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    background-color: $serviceAffter3;
+    box-shadow: $serviceBoxShadow;
+  }
+  &_backcolor-gray:after {
+    content: "";
+    width: 50%;
+    height: 18px;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    background-color: $serviceAffter4;
+    box-shadow: $serviceBoxShadow;
+  }
+  &__title {
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  &__img {
+    max-width: 100%;
+    max-height: 110px;
+  }
+  &__paragraph {
+    font-size: 1.4rem;
+  }
+  &__btn {
+    margin-top: 100px;
+  }
 }
