@@ -93,7 +93,7 @@ html {
 .main {
   font-family: "Jost";
   font-weight: 400;
-  
+
   &__aboutUs {
     overflow: auto;
     padding: 50px 0;
@@ -146,9 +146,7 @@ html {
   font-weight: 400;
 }
 
-
 .offerings {
-  
   text-align: center;
   &__head {
     text-align: center;
@@ -159,7 +157,6 @@ html {
   }
   &__services {
     margin-top: 70px;
-    
   }
   &__service:after {
     content: "";
@@ -175,7 +172,6 @@ html {
     margin-right: 0;
   }
 }
-
 
 .service {
   width: 20.3125%;
@@ -239,5 +235,96 @@ html {
   }
   &__btn {
     margin-top: 100px;
+  }
+}
+.industries {
+  padding: 50px 0;
+}
+.gallery-slider {
+  font-size: 0;
+  background-color: #c7c7c7;
+
+  &__inner {
+    width: 1210px;
+    margin: 0 auto;
+    background-color: #d8d8d8;
+    overflow: hidden;
+    position: relative;
+  }
+  &__link {
+    width: 100%;
+    position: relative;
+    background-color: #000;
+    color: $industriesColor;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  &__group-items {
+    width: 10000px;
+    transition: transform 1s ease-out;
+  }
+  &__item {
+    width: 3.5%;
+    float: left;
+    margin-top: 0.5%;
+    margin-right: 0.26%;
+
+    &_size-more {
+      width: 4.6%;
+      margin-top: 0;
+    }
+  }
+
+  &__span {
+    position: absolute;
+    width: 100%;
+    font-size: 2rem;
+    bottom: 0;
+    left: 0;
+    line-height: 103px;
+    background-color: $industriesBackColor;
+    text-align: center;
+  }
+  &__span_height-more {
+    line-height: 130px;
+  }
+  &__arrow-left {
+    font-size: 1.6rem;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: rgba(94, 94, 94, 0.5);
+    left: 29.8%;
+    margin-top: 18%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: #fff;
+  }
+  &__arrow-left:hover {
+    background-color: rgba(94, 94, 94, 0.9);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+  &__arrow-right {
+    font-size: 1.6rem;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: rgba(94, 94, 94, 0.5);
+    right: 29.8%;
+    margin-top: 18%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: #fff;
+  }
+  &__arrow-right:hover {
+    background-color: rgba(94, 94, 94, 0.9);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   }
 }
