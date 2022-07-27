@@ -242,12 +242,12 @@ html {
 }
 .gallery-slider {
   font-size: 0;
-  background-color: #c7c7c7;
+  // background-color: #c7c7c7;
 
   &__inner {
-    width: 1210px;
-    margin: 0 auto;
-    background-color: #d8d8d8;
+    // width: 1210px;
+    // margin: 0 auto;
+    // background-color: #d8d8d8;
     overflow: hidden;
     position: relative;
   }
@@ -263,17 +263,19 @@ html {
     display: block;
   }
   &__group-items {
-    width: 10000px;
-    transition: transform 1s ease-out;
+    width: 825%;
+    transition: transform 0.7s linear;
   }
   &__item {
     width: 3.5%;
+    max-height: 350px;
     float: left;
     margin-top: 0.5%;
     margin-right: 0.26%;
-
+    transition: all 0.7s linear;
     &_size-more {
       width: 4.6%;
+      // transition: width 1s ease-out, height 1s ease-out;
       margin-top: 0;
     }
   }

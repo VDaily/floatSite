@@ -12,23 +12,27 @@ window.addEventListener("load", function () {
   arrowRight.addEventListener("click", function (event) {
     let groupItems = document.querySelector(".gallery-slider__group-items");
     let bigItem = document.querySelector(".gallery-slider__item_size-more");
-    let marginRight, widthElement;
-    if (!groupItems) return;
 
+    if (!groupItems) return;
+    let marginRight, widthElement, heightElement;
     if (!bigItem) return;
 
     marginRight = parseFloat(
       getComputedStyle(groupItems.children[0]).marginRight
     );
     widthElement = groupItems.children[0].offsetWidth + marginRight;
-    console.log(widthElement);
+    heightElement = groupItems.children[0].offsetHeight;
     translateXElem = translateXElem - widthElement;
+
     console.log(translateXElem);
     groupItems.style.transform = `translateX(${translateXElem + "px"})`;
-
+    groupItems.style.tranfform = `translateY9(${heightElement + "px"})`;
     let nextElement = bigItem.nextElementSibling;
 
-    bigItem.classList.remove("gallery-slider__item_size-more");
+    nextElement.style.width = translateXElem + "px";
+    // nextElement.style.transition = `width 2s linear, margin-top 2s linear`;
+
     nextElement.classList.add("gallery-slider__item_size-more");
+    bigItem.classList.remove("gallery-slider__item_size-more");
   });
 });
