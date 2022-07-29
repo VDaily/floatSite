@@ -242,14 +242,13 @@ html {
 }
 .gallery-slider {
   font-size: 0;
-  // background-color: #c7c7c7;
+  width: 1212px;
+  margin: 0 auto;
+  height: 520px;
+  position: relative;
 
   &__inner {
-    // width: 1210px;
-    // margin: 0 auto;
-    // background-color: #d8d8d8;
     overflow: hidden;
-    position: relative;
   }
   &__link {
     width: 100%;
@@ -263,12 +262,24 @@ html {
     display: block;
   }
   &__group-items {
-    width: 825%;
+    // width: 825%;
+    width: 10000px;
     transition: transform 0.7s linear;
   }
+  &__arrows {
+    width: 9.375%;
+    font-size: 1.6rem;
+    position: absolute;
+    left: 45%;
+    bottom: 0px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+  }
+
   &__item {
     width: 3.5%;
-    max-height: 350px;
+    // max-height: 350px;
     float: left;
     margin-top: 0.5%;
     margin-right: 0.26%;
@@ -294,36 +305,27 @@ html {
     line-height: 130px;
   }
   &__arrow-left {
-    font-size: 1.6rem;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
     border-radius: 50%;
-    background-color: rgba(94, 94, 94, 0.5);
-    left: 29.8%;
-    margin-top: 18%;
+    background-color: rgba(94, 94, 94, 0.7);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    margin-right: 5%;
     cursor: pointer;
-    color: #fff;
   }
   &__arrow-left:hover {
     background-color: rgba(94, 94, 94, 0.9);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   }
   &__arrow-right {
-    font-size: 1.6rem;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background-color: rgba(94, 94, 94, 0.5);
-    right: 29.8%;
-    margin-top: 18%;
+    background-color: rgba(94, 94, 94, 0.7);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    display: inline-block;
     cursor: pointer;
-    color: #fff;
   }
   &__arrow-right:hover {
     background-color: rgba(94, 94, 94, 0.9);
