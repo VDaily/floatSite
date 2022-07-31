@@ -403,6 +403,15 @@ body {
   border: none;
   font-size: 2rem;
 }
+.btn_appearance-back-border {
+  border: 1px solid #0d89ca;
+  background-color: #0d89ca;
+}
+.btn_appearance {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #0d89ca;
+}
 
 .main {
   font-weight: 400;
@@ -420,17 +429,8 @@ body {
   float: left;
   width: 50%;
 }
-.aboutUs__btn_appearance-back-border {
-  border: 1px solid #0d89ca;
-  background-color: #0d89ca;
-}
 .aboutUs__btn {
   margin-right: 50px;
-}
-.aboutUs__btn_appearance {
-  background-color: #ffffff;
-  color: #000;
-  border: 1px solid #0d89ca;
 }
 .aboutUs__photo {
   width: 41.015625%;
@@ -648,6 +648,88 @@ body {
 .partners__img {
   max-width: 100%;
   height: auto;
+}
+
+.testimonials {
+  text-align: center;
+  padding: 50px 0;
+}
+.testimonials__menu {
+  margin: 30px 0;
+}
+.testimonials__reviews {
+  margin-top: 60px;
+}
+.testimonials__link {
+  padding: 0 20px;
+  text-decoration: none;
+  color: rgba(8, 26, 43, 0.75);
+}
+.testimonials__link_active {
+  border-bottom: 2px solid rgba(8, 26, 43, 0.6);
+}
+
+.reviews__item {
+  width: 31.25%;
+  float: left;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  margin-right: 2.421875%;
+}
+.reviews__body {
+  height: 248px;
+  padding: 10px 13.75% 0 13.75%;
+  margin-bottom: 70px;
+}
+.reviews__item:last-child {
+  margin-right: 0;
+}
+.reviews__stars {
+  position: relative;
+}
+.reviews__stars:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url("../../img/testimonials/stars/img1.svg");
+  left: 2.5%;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.reviews__star {
+  font-size: 3.5rem;
+  color: #d2c339;
+  margin-left: -2.3%;
+}
+.reviews__star:nth-child(1) {
+  margin-left: 0;
+}
+.reviews__comment {
+  font-size: 1.6rem;
+}
+.reviews__footer {
+  background-color: #a2b8c1;
+  height: 152px;
+  padding: 0 8.5% 20px 8.5%;
+  text-align: center;
+  color: #fff;
+}
+.reviews__avatar {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+}
+.reviews__adress {
+  height: 60px;
+  margin: 10px 0;
+}
+.reviews__img {
+  margin-right: 7.5%;
+}
+.reviews__img:last-child {
+  margin-right: 0;
+}
+.reviews_disabled {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
