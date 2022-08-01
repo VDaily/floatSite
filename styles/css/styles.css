@@ -764,7 +764,7 @@ body {
 }
 
 .note-blog {
-  width: 48.4375%;
+  max-width: 48.4375%;
   margin-right: 3.125%;
   float: left;
   position: relative;
@@ -793,6 +793,8 @@ body {
 }
 .note-blog__img {
   width: 100%;
+  max-height: 280px;
+  object-fit: cover;
 }
 .note-blog__release {
   position: relative;
@@ -809,11 +811,11 @@ body {
 }
 .note-blog__paragraph {
   font-size: 2.4rem;
-  padding: 30px 7%;
+  padding: 30px 7% 5px 7%;
   font-weight: 500;
 }
 .note-blog__btn {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
