@@ -417,11 +417,25 @@ body {
   font-weight: 400;
 }
 .main__aboutUs {
-  overflow: auto;
-  padding: 50px 0;
-  margin-top: 50px;
+  overflow: hidden;
+  padding-top: 100px;
+}
+.main__industries {
+  padding-top: 50px;
 }
 .main__offerings {
+  padding-top: 50px;
+}
+.main__partners {
+  padding-top: 50px;
+}
+.main__testimonials {
+  padding-top: 100px;
+}
+.main__blogs {
+  padding-top: 50px;
+}
+.main__newsroom {
   padding: 50px 0;
 }
 
@@ -541,11 +555,7 @@ body {
   font-size: 1.4rem;
 }
 .service__btn {
-  margin-top: 100px;
-}
-
-.industries {
-  padding: 50px 0;
+  margin-top: 70px;
 }
 
 .gallery-slider {
@@ -645,7 +655,6 @@ body {
 
 .partners {
   text-align: center;
-  padding: 50px 0;
 }
 .partners__paragraph {
   margin-top: 50px;
@@ -660,7 +669,6 @@ body {
 
 .testimonials {
   text-align: center;
-  padding: 50px 0;
 }
 .testimonials__menu {
   margin: 30px 0;
@@ -750,7 +758,6 @@ body {
 }
 
 .blogs {
-  padding: 50px 0px;
   overflow: hidden;
   text-align: center;
 }
@@ -793,7 +800,7 @@ body {
 }
 .note-blog__img {
   width: 100%;
-  max-height: 280px;
+  max-height: 460px;
   object-fit: cover;
 }
 .note-blog__release {
@@ -816,6 +823,39 @@ body {
 }
 .note-blog__btn {
   margin-bottom: 30px;
+}
+
+.newsroom {
+  text-align: center;
+}
+.newsroom__inner {
+  position: relative;
+}
+.newsroom__btn {
+  right: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.news-letter {
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 50px;
+  font-size: 3.6rem;
+}
+.news-letter:last-child {
+  margin-bottom: 0;
+}
+.news-letter__paragraph {
+  font-weight: 500;
+}
+.news-letter__release {
+  font-weight: 300;
+}
+.news-letter__img {
+  max-width: 250px;
+  float: left;
+  margin-right: 5.46875%;
 }
 
 /*# sourceMappingURL=styles.css.map */
