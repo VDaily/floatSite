@@ -438,6 +438,9 @@ body {
 .main__newsroom {
   padding: 50px 0;
 }
+.main__location {
+  padding: 50px 0;
+}
 
 .aboutUs__content {
   float: left;
@@ -856,6 +859,121 @@ body {
   max-width: 250px;
   float: left;
   margin-right: 5.46875%;
+}
+
+.location {
+  text-align: center;
+  overflow: hidden;
+}
+.location__subheader {
+  font-size: 2.8rem;
+  margin: -20px 0 40px 0;
+}
+.location__info {
+  width: 100%;
+}
+.location__information {
+  float: left;
+  font-size: 1.6rem;
+  width: 65.953125%;
+  position: relative;
+  margin-right: 0%;
+}
+.location__span {
+  width: 22%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 40px;
+  position: relative;
+  text-align: center;
+}
+.location__span-address:before {
+  content: "";
+  width: 30px;
+  height: 40px;
+  background: url("../../img/location/location-ico.svg") no-repeat;
+  margin-top: -40px;
+  left: 45%;
+  position: absolute;
+}
+.location__span-telephone:before {
+  content: "";
+  width: 30px;
+  height: 40px;
+  background: url("../../img/location/phone-ico.svg") no-repeat;
+  margin-top: -52px;
+  left: 45%;
+  position: absolute;
+}
+.location__span-email:before {
+  content: "";
+  width: 30px;
+  height: 40px;
+  background: url("../../img/location/mail-ico.svg") no-repeat;
+  margin-top: -46px;
+  left: 45%;
+  position: absolute;
+}
+.location__map {
+  margin-top: 40px;
+  width: 70%;
+}
+.location__social {
+  margin-top: 15px;
+}
+.location__social-img {
+  max-width: 33px;
+  max-height: 33px;
+  margin-right: 3%;
+}
+
+.contact-us {
+  width: 33.046875%;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  border-radius: 20px;
+  padding: 1px;
+  float: left;
+}
+.contact-us__header {
+  display: inline-block;
+  margin: 50px 0;
+  font-weight: 600;
+}
+.contact-us__form {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.contact-us__input {
+  line-height: 53px;
+  width: 90%;
+  padding: 0 5%;
+  background-color: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  display: block;
+  margin-bottom: 45px;
+  outline: none;
+}
+.contact-us__textarea {
+  width: 90%;
+  height: 153px;
+  padding: 10px 5%;
+  background-color: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  display: block;
+  margin-bottom: 45px;
+  resize: none;
+  outline: none;
+}
+.contact-us__btn {
+  margin: 20px 0 50px 0;
+}
+.contact-us__btn_size-s {
+  max-width: 10%;
+  display: block;
+  padding: 10px 45px;
 }
 
 /*# sourceMappingURL=styles.css.map */
