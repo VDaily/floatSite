@@ -257,13 +257,16 @@ body {
   }
 }
 .industries {
+  text-align: center;
 }
+
 .gallery-slider {
   font-size: 0;
   width: 1212px;
   margin: 0 auto;
   height: 520px;
   position: relative;
+  text-align: left;
 
   &__inner {
     overflow: hidden;
@@ -602,13 +605,13 @@ body {
     position: relative;
     margin-right: 0%;
   }
+
   &__span {
-    width: 22%;
     display: inline-block;
     vertical-align: middle;
     margin-top: 40px;
     position: relative;
-
+    margin-right: 70px;
     text-align: center;
 
     &-address:before {
@@ -638,6 +641,12 @@ body {
       left: 45%;
       position: absolute;
     }
+  }
+  &__span:first-child {
+    width: 33.333%;
+  }
+  &__span:last-child {
+    margin-right: 0px;
   }
   &__map {
     margin-top: 40px;
@@ -701,5 +710,43 @@ body {
     max-width: 10%;
     display: block;
     padding: 10px 45px;
+  }
+}
+
+.footer {
+  background-color: #0d89ca;
+  color: #fff;
+
+  &__inner {
+    padding: 60px;
+    overflow: auto;
+  }
+  &__column {
+    // width: 17.421875%;
+    width: 19.22413793103448%;
+    float: left;
+    margin-right: 7.701149425287356%;
+    &-header {
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  &__link {
+    display: block;
+  }
+
+  &__bottom {
+    line-height: 62px;
+    background: rgba(#001c27, 0.75);
+    text-align: center;
+    clear: both;
   }
 }
