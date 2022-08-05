@@ -1,6 +1,11 @@
 .header__top_retrofit {
   background: rgb(17, 13, 44);
+  transition: background .5s ease;
   position: fixed;
-  z-index: 100;
   margin-top: 0px;
+}
+
+.nav__link_active {
+  padding: 0 10px 5px 10px;
+  border-bottom: 2px solid #fff;
 }
