@@ -4,48 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="styles/css/styles.css" />
     <title>Document</title>
   </head>
-  <body>
-    <header class="header">
+  <body id="home">
+    <header class="header" >
       <div class="header__inner">
         <div class="header__top">
           <div class="container">
             <div class="logo header__logo">
-              <img class="logo__img" src="img/logo/logo.png" alt="" />
+              <a class="logo__link" href="index.html"><img class="logo__img" src="img/logo/logo.png" alt="" /></a>
             </div>
             <nav class="nav header__nav">
               <ul class="nav__list">
                 <li class="nav__list-item">
-                  <a class="nav__link" href="#">Home</a>
+                  <a class="nav__link nav__link_active" href="#home">Home</a>
+                </li>
+                <li class="nav__list-item">
+                  <a class="nav__link" href="#about-us">About Us</a>
                 </li>
                 <li class="nav__list-item">
                   <a class="nav__link" href="#offerings">Offerings</a>
                 </li>
                 <li class="nav__list-item">
-                  <a class="nav__link" href="#">Industries</a>
+                  <a class="nav__link" href="#industries">Industries</a>
                 </li>
                 <li class="nav__list-item">
-                  <a class="nav__link" href="#">Partners</a>
+                  <a class="nav__link" href="#partners">Partners</a>
                 </li>
                 <li class="nav__list-item">
-                  <a class="nav__link" href="#">Testimonials</a>
+                  <a class="nav__link" href="#testimonials">Testimonials</a>
                 </li>
                 <li class="nav__list-item">
-                  <a class="nav__link" href="#">Insights</a>
+                  <a class="nav__link" href="#news">News</a>
                 </li>
                 <li class="nav__list-item">
-                  <a class="nav__link" href="#">Company</a>
+                  <a class="nav__link" href="#featured-events">Featured Events</a>
                 </li>
                 <li class="nav__list-item">
-                  <a class="nav__link" href="#">Contact Us</a>
+                  <a class="nav__link" href="#location">Contact Us</a>
                 </li>
               </ul>
             </nav>
@@ -63,9 +60,9 @@
     </header>
     <main class="main">
       <div class="container">
-        <section class="aboutUs main__aboutUs">
+        <section class="aboutUs main__aboutUs" id="about-us">
           <div class="aboutUs__content">
-            <h2 class="title-header aboutUs__title-header">About Us</h2>
+            <h2 class="title-header main__title-header">About Us</h2>
 
             <p class="aboutUs__paragraph">
               New Vision Softcom & Consultancy, is a hard and smart working IT
@@ -91,7 +88,7 @@
       <section class="offerings main__offerings" id="offerings">
         <div class="container">
           <div class="offerings__head">
-            <h2 class="title-header">Offerings</h2>
+            <h2 class="title-header main__title-header">Offerings</h2>
             <p class="offerings__paragraph">Services we offer</p>
           </div>
 
@@ -158,15 +155,15 @@
         </div>
       </section>
 
-      <section class="industries main__industries">
+      <section class="industries main__industries" id="industries">
         <div class="container">
-          <h2 class="title-header">Industries</h2>
+          <h2 class="title-header main__title-header">Industries</h2>
           <p class="industries__paragraph">services we offer</p>
           <div class="gallery-slider">
             <div class="gallery-slider__inner">
               <div class="gallery-slider__group-items">
                 <div class="gallery-slider__item">
-                  <a href="#" class="gallery-slider__link">
+                  <a href="javascript:void(0);" class="gallery-slider__link">
                     <img
                       class="gallery-slider__img"
                       src="img/industries/img1.svg"
@@ -181,7 +178,7 @@
                 <div
                   class="gallery-slider__item gallery-slider__item_size-more"
                 >
-                  <a href="#" class="gallery-slider__link">
+                  <a href="javascript:void(0);" class="gallery-slider__link">
                     <img
                       class="gallery-slider__img"
                       src="img/industries/img2.svg"
@@ -194,7 +191,7 @@
                   </a>
                 </div>
                 <div class="gallery-slider__item">
-                  <a href="#" class="gallery-slider__link">
+                  <a href="javascript:void(0);" class="gallery-slider__link">
                     <img
                       class="gallery-slider__img"
                       src="img/industries/img3.svg"
@@ -207,7 +204,7 @@
                 </div>
 
                 <div class="gallery-slider__item">
-                  <a href="#" class="gallery-slider__link">
+                  <a href="javascript:void(0);" class="gallery-slider__link">
                     <img
                       class="gallery-slider__img"
                       src="img/industries/img3.svg"
@@ -220,7 +217,7 @@
                 </div>
 
                 <div class="gallery-slider__item">
-                  <a href="#" class="gallery-slider__link">
+                  <a href="javascript:void(0);" class="gallery-slider__link">
                     <img
                       class="gallery-slider__img"
                       src="img/industries/img3.svg"
@@ -241,9 +238,9 @@
         </div>
       </section>
 
-      <section class="partners main__partners">
+      <section class="partners main__partners" id="partners">
         <div class="container">
-          <h2 class="title-header">Partners</h2>
+          <h2 class="title-header main__title-header">Partners</h2>
 
           <p class="partners__paragraph">
             At NewVision, strategic partnesrships are one of the core pillars of
@@ -259,18 +256,18 @@
         </div>
       </section>
 
-      <section class="testimonials main__testimonials">
+      <section class="testimonials main__testimonials" id="testimonials">
         <div class="container">
-          <h2 class="title-header">Testimonials</h2>
+          <h2 class="title-header main__title-header">Testimonials</h2>
           <div class="testimonials__menu">
             <a
-              href="#"
+              href="javascript:void(0);"
               data-reviews="letter"
               class="testimonials__link testimonials__link_active"
             >
               Client Say's
             </a>
-            <a href="#" data-reviews="video" class="testimonials__link">
+            <a href="javascript:void(0);" data-reviews="video" class="testimonials__link">
               Video Testimonials
             </a>
           </div>
@@ -457,7 +454,7 @@
         </div>
       </section>
 
-      <section class="blogs main__blogs">
+      <!-- <section class="blogs main__blogs">
         <div class="container">
           <div class="blogs__inner">
             <h2 class="title-header">Blogs</h2>
@@ -497,12 +494,12 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <section class="newsroom main__newsroom">
+      <section class="newsroom main__newsroom" id="news">
         <div class="container">
           <div class="newsroom__inner">
-            <h2 class="title-header">News</h2>
+            <h2 class="title-header main__title-header">News</h2>
             <button class="btn btn_appearance newsroom__btn">Read more</button>
 
             <div class="news-letter">
@@ -525,10 +522,10 @@
         </div>
       </section>
 
-      <section class="newsroom main__newsroom">
+      <section class="newsroom main__newsroom" id="featured-events">
         <div class="container">
           <div class="newsroom__inner">
-            <h2 class="title-header">Featured Events</h2>
+            <h2 class="title-header main__title-header">Featured Events</h2>
             <button class="btn btn_appearance newsroom__btn">Read more</button>
 
             <div class="news-letter">
@@ -551,9 +548,9 @@
         </div>
       </section>
 
-      <section class="location main__location">
+      <section class="location main__location" id="location">
         <div class="container">
-          <h2 class="title-header">Contact Us</h2>
+          <h2 class="title-header main__title-header">Contact Us</h2>
           <p class="location__subheader">
             Questions ? We will put you on the right path.
           </p>
@@ -627,38 +624,38 @@
           <div class="footer__content">
             <div class="footer__column">
               <span class="footer__column-header">Our Offerings</span>
-              <a href="#" class="footer__link">Software Product Engineering</a>
-              <a href="#" class="footer__link">Business Process management</a>
-              <a href="#" class="footer__link">Cloud</a>
-              <a href="#" class="footer__link">DevOps</a>
-              <a href="#" class="footer__link">QA Automation</a>
-              <a href="#" class="footer__link">Data</a>
-              <a href="#" class="footer__link">Utilities</a>
+              <a href="javascript:void(0);" class="footer__link">Software Product Engineering</a>
+              <a href="javascript:void(0);" class="footer__link">Business Process management</a>
+              <a href="javascript:void(0);" class="footer__link">Cloud</a>
+              <a href="javascript:void(0);" class="footer__link">DevOps</a>
+              <a href="javascript:void(0);" class="footer__link">QA Automation</a>
+              <a href="javascript:void(0);" class="footer__link">Data</a>
+              <a href="javascript:void(0);" class="footer__link">Utilities</a>
             </div>
             <div class="footer__column">
               <span class="footer__column-header">Industries</span>
-              <a href="#" class="footer__link">Insurance</a>
-              <a href="#" class="footer__link">Financial Services</a>
-              <a href="#" class="footer__link">Energy</a>
-              <a href="#" class="footer__link">Healthcare</a>
-              <a href="#" class="footer__link">Telecom</a>
-              <a href="#" class="footer__link">Government</a>
+              <a href="javascript:void(0);" class="footer__link">Insurance</a>
+              <a href="javascript:void(0);" class="footer__link">Financial Services</a>
+              <a href="javascript:void(0);" class="footer__link">Energy</a>
+              <a href="javascript:void(0);" class="footer__link">Healthcare</a>
+              <a href="javascript:void(0);" class="footer__link">Telecom</a>
+              <a href="javascript:void(0);" class="footer__link">Government</a>
             </div>
             <div class="footer__column">
               <span class="footer__column-header">Resources</span>
-              <a href="#" class="footer__link">Events</a>
-              <a href="#" class="footer__link">Blog</a>
-              <a href="#" class="footer__link">Newsroom</a>
-              <a href="#" class="footer__link">Articles</a>
-              <a href="#" class="footer__link">Case Studies</a>
+              <a href="javascript:void(0);" class="footer__link">Events</a>
+              <a href="javascript:void(0);" class="footer__link">Blog</a>
+              <a href="javascript:void(0);" class="footer__link">Newsroom</a>
+              <a href="javascript:void(0);" class="footer__link">Articles</a>
+              <a href="javascript:void(0);" class="footer__link">Case Studies</a>
             </div>
             <div class="footer__column">
               <span class="footer__column-header">Company</span>
-              <a href="#" class="footer__link">About Us</a>
-              <a href="#" class="footer__link">Leadership</a>
-              <a href="#" class="footer__link">People and Culture</a>
-              <a href="#" class="footer__link">Terms and conditions</a>
-              <a href="#" class="footer__link">Sitemap</a>
+              <a href="javascript:void(0);" class="footer__link">About Us</a>
+              <a href="javascript:void(0);" class="footer__link">Leadership</a>
+              <a href="javascript:void(0);" class="footer__link">People and Culture</a>
+              <a href="javascript:void(0);" class="footer__link">Terms and conditions</a>
+              <a href="javascript:void(0);" class="footer__link">Sitemap</a>
             </div>
           </div>
         </div>
