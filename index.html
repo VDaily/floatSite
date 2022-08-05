@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,8 +16,8 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <div class="container">
-          <div class="header__head">
+        <div class="header__top">
+          <div class="container">
             <div class="logo header__logo">
               <img class="logo__img" src="img/logo/logo.png" alt="" />
             </div>
@@ -27,7 +27,7 @@
                   <a class="nav__link" href="#">Home</a>
                 </li>
                 <li class="nav__list-item">
-                  <a class="nav__link" href="#">Offerings</a>
+                  <a class="nav__link" href="#offerings">Offerings</a>
                 </li>
                 <li class="nav__list-item">
                   <a class="nav__link" href="#">Industries</a>
@@ -50,6 +50,8 @@
               </ul>
             </nav>
           </div>
+        </div>
+        <div class="container">
           <div class="header__content">
             <h1 class="header__title">
               How we transform business to unlock value
@@ -86,7 +88,7 @@
           </div>
         </section>
       </div>
-      <section class="offerings main__offerings">
+      <section class="offerings main__offerings" id="offerings">
         <div class="container">
           <div class="offerings__head">
             <h2 class="title-header">Offerings</h2>
@@ -430,7 +432,7 @@
             </div>
           </div>
 
-          <!-- <div class="reviews testimonials__reviews reviews_disabled">
+          <div class="reviews testimonials__reviews reviews_disabled">
             <iframe
               class="reviews__videoFrame"
               src="https://www.youtube-nocookie.com/embed/LRP8d7hhpoQ"
@@ -447,7 +449,7 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-          </div> -->
+          </div>
 
           <button class="btn service__btn btn_appearance-back-border">
             More testimonials
@@ -670,5 +672,6 @@
     </footer>
     <script src="javascript/industries/gallery-scrole.js"></script>
     <script src="javascript/testimonials/reviews.js"></script>
+    <script src="javascript/window/scroll.js"></script>
   </body>
 </html>

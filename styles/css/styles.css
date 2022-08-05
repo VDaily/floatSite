@@ -353,14 +353,20 @@ body {
   height: 890px;
   position: relative;
 }
+.header__top {
+  width: 100%;
+  margin-top: 56px;
+  height: 60px;
+  line-height: 60px;
+  padding: 20px 0;
+  position: absolute;
+}
 .header__logo {
   float: left;
-  margin-top: 56px;
   margin-right: 11.328125%;
 }
 .header__nav {
   float: left;
-  margin-top: 72px;
 }
 .header__content {
   position: absolute;
@@ -385,6 +391,7 @@ body {
   margin: 0 auto;
   height: 100%;
   padding: 0 5.5555555556%;
+  position: relative;
 }
 
 .logo {
@@ -397,6 +404,7 @@ body {
 
 .nav {
   width: 76.875%;
+  display: inline-block;
   font-size: 1.8rem;
   font-weight: 400;
 }
@@ -1044,6 +1052,13 @@ body {
   background: rgba(0, 28, 39, 0.75);
   text-align: center;
   clear: both;
+}
+
+.header__top_retrofit {
+  background: rgb(17, 13, 44);
+  position: fixed;
+  z-index: 100;
+  margin-top: 0px;
 }
 
 /*# sourceMappingURL=styles.css.map */

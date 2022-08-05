@@ -16,14 +16,23 @@ body {
     height: 890px;
     position: relative;
   }
+
+  &__top {
+    width: 100%;
+    margin-top: 56px;
+    height: 60px;
+    line-height: 60px;
+    padding: 20px 0;
+    position: absolute;
+  }
   &__logo {
     float: left;
-    margin-top: 56px;
+    // margin-top: 56px;
     margin-right: 11.328125%;
   }
   &__nav {
     float: left;
-    margin-top: 72px;
+    // margin-top: 72px;
   }
   &__content {
     position: absolute;
@@ -49,6 +58,7 @@ body {
   margin: 0 auto;
   height: 100%;
   padding: 0 5.555555555555556%;
+  position: relative;
 }
 
 .logo {
@@ -60,6 +70,8 @@ body {
 }
 .nav {
   width: 76.875%;
+  // width: 100%;
+  display: inline-block;
   font-size: 1.8rem;
   font-weight: 400;
   &__list {
