@@ -1,0 +1,55 @@
+@media (max-width: 1275px) {
+  .nav {
+    &__list-item {
+      margin-right: 2%;
+    }
+  }
+}
+
+@media (max-width: 1177px) {
+  .aboutUs__btn {
+    margin-right: 2%;
+  }
+  .nav {
+    &__list-item {
+      margin-right: 1%;
+    }
+  }
+}
+
+@media (max-width: 1094px) {
+  .btn {
+    width: 200px;
+  }
+  .main__title-header {
+    margin-bottom: 10px;
+  }
+  .aboutUs {
+    &__paragraph {
+      margin-top: 0;
+    }
+  }
+  .header__title {
+    font-size: 6.3rem;
+  }
+  .aboutUs__paragraph {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 1065px) {
+  .nav {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1015px) {
+  .btn {
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+  }
+}
+@media (max-width: 969px) {
+  .aboutUs {
+  }
+}
