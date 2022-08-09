@@ -2,12 +2,11 @@ html {
   font-size: 10px;
 }
 body {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: "Jost", sans-serif;
 }
 .header {
   width: 100%;
-  height: 800px;
 
   &__inner {
     background: url("../../img/header/backImg.png"), $overlayColor;
@@ -110,6 +109,7 @@ body {
   background-color: $backBtn;
   border: none;
   font-size: 2rem;
+  text-align: center;
 
   &_appearance-back-border {
     border: 1px solid $borderBtnColor;
@@ -167,7 +167,6 @@ body {
   &__photo {
     width: 41.015625%;
     float: right;
-    height: 525px;
   }
   &__img {
     max-width: 100%;
@@ -354,16 +353,20 @@ body {
   }
   &__span {
     position: absolute;
-    width: 100%;
+    width: 96%;
     font-size: 2rem;
     bottom: 0;
     left: 0;
-    line-height: 103px;
+    padding: 0 2%;
+    height: 77px;
+    line-height: 77px;
     background-color: $industriesBackColor;
     text-align: center;
   }
   &__span_height-more {
-    line-height: 130px;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 2%;
   }
   &__arrow-left {
     width: 47%;
@@ -450,7 +453,7 @@ body {
   }
   &__body {
     height: 248px;
-    padding: 10px 13.75% 0 13.75%;
+    padding: 10px 10% 0 10%;
     margin-bottom: 70px;
   }
   &__item:last-child {
@@ -459,6 +462,7 @@ body {
 
   &__stars {
     position: relative;
+    margin-bottom: 10px;
   }
   &__stars:before {
     content: "";
@@ -468,6 +472,7 @@ body {
     left: 2.5%;
     background-repeat: no-repeat;
     position: absolute;
+    background-size: cover;
   }
   &__star {
     font-size: 3.5rem;
@@ -479,6 +484,7 @@ body {
   }
   &__comment {
     font-size: 1.6rem;
+    margin: 0;
   }
   &__footer {
     background-color: #a2b8c1;
@@ -486,6 +492,7 @@ body {
     padding: 0 8.5% 20px 8.5%;
     text-align: center;
     color: #fff;
+    position: relative;
     // margin: 0 -100px -100px;
   }
 
@@ -493,12 +500,20 @@ body {
     width: 100px;
     height: 100px;
     margin-top: -50px;
+    margin-bottom: 15px;
     // position: absolute;
     // left: ;
   }
   &__adress {
-    height: 60px;
-    margin: 10px 0;
+    // height: 60px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  &__socials {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
   &__img {
     margin-right: 7.5%;
@@ -509,7 +524,7 @@ body {
   }
 
   &__videoFrame {
-    width: 40%;
+    width: 48%;
     height: 350px;
     margin-right: 3%;
     border: none;
@@ -670,6 +685,7 @@ body {
       margin-top: -40px;
       left: 45%;
       position: absolute;
+      background-size: 100%;
     }
     &-telephone:before {
       content: "";
@@ -679,6 +695,7 @@ body {
       margin-top: -52px;
       left: 45%;
       position: absolute;
+      background-size: 100%;
     }
     &-email:before {
       content: "";
@@ -688,6 +705,7 @@ body {
       margin-top: -46px;
       left: 45%;
       position: absolute;
+      background-size: 100%;
     }
   }
   &__span:first-child {
@@ -752,7 +770,7 @@ body {
     outline: none;
   }
   &__btn_size-s {
-    max-width: 10%;
+    max-width: 80px;
     display: block;
     padding: 10px 45px;
   }
