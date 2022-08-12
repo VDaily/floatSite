@@ -1,17 +1,5 @@
 let header = document.querySelector(".header__top");
 let headerMarginTop = parseFloat(getComputedStyle(header, null).marginTop);
-fixingHeaderWhenScrolling();
-
-window.addEventListener("scroll", fixingHeaderWhenScrolling);
-
-function fixingHeaderWhenScrolling(event) {
-  let NumberOfPixelsFromTop = window.pageYOffset;
-  if (NumberOfPixelsFromTop > headerMarginTop) {
-    header.classList.add("header__top_retrofit");
-  } else {
-    header.classList.remove("header__top_retrofit");
-  }
-}
 
 header.addEventListener("click", function scrollingToLinkedElement(event) {
   let link = event.target.closest(".nav__link");
@@ -42,3 +30,25 @@ header.addEventListener("click", function scrollingToLinkedElement(event) {
     behavior: "smooth",
   });
 });
+
+class FixingHeader {
+  startFixing() {
+    this.fixing();
+    window.addEventListener("scroll", this.fixing);
+  }
+  finishFixing() {
+    window.removeEventListener("scroll", this.fixing);
+    header.classList.remove("header__top_retrofit");
+  }
+  fixing() {
+    let numberOfPixelsFromTop = window.pageYOffset;
+    if (numberOfPixelsFromTop > headerMarginTop) {
+      header.classList.add("header__top_retrofit");
+    } else {
+      header.classList.remove("header__top_retrofit");
+    }
+  }
+}
+
+let fixingHeader = new FixingHeader();
+fixingHeader.startFixing();

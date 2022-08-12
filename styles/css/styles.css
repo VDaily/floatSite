@@ -367,8 +367,7 @@ body {
   float: left;
 }
 .header__nav {
-  position: absolute;
-  right: 30px;
+  float: left;
 }
 .header__content {
   position: absolute;
@@ -403,9 +402,12 @@ body {
   max-width: 100%;
   max-height: 61px;
 }
+.logo_disabled {
+  display: none;
+}
 
 .nav {
-  width: 76.875%;
+  width: 87.875%;
   font-size: 1.8rem;
   font-weight: 400;
   text-align: right;
@@ -415,11 +417,33 @@ body {
   margin-left: 0;
   padding: 0;
   clear: both;
+  text-align: center;
+}
+.nav__list_full {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rgb(17, 13, 44);
+  top: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  overflow: scroll;
+  font-size: 2rem;
+  padding: 20px 0;
+}
+.nav__list_disabled {
+  display: none;
 }
 .nav__list-item {
   float: left;
   list-style-type: none;
   margin-right: 2.8894308943%;
+}
+.nav__list-item_full {
+  float: none;
+  margin-right: 0;
 }
 .nav__list-item:last-child {
   margin-right: 0;
@@ -432,6 +456,57 @@ body {
   cursor: pointer;
 }
 
+.gamburger {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  width: 45px;
+  height: 36px;
+  z-index: 2000;
+}
+.gamburger__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.gamburger__span {
+  width: 45px;
+  height: 7px;
+  left: 0;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 7px;
+  transition: top 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+.gamburger__item1 {
+  top: 0px;
+}
+.gamburger__item1_transform {
+  top: 14px;
+  opacity: 0;
+}
+.gamburger__item2 {
+  top: 14px;
+}
+.gamburger__item2_transform {
+  transform: rotate(-45deg);
+}
+.gamburger__item3 {
+  top: 14px;
+}
+.gamburger__item3_transform {
+  transform: rotate(45deg);
+}
+.gamburger__item4 {
+  top: 28px;
+}
+.gamburger__item4_transform {
+  top: 14px;
+  opacity: 0;
+}
+.gamburger_disabled {
+  display: none;
+}
 .btn {
   width: 236px;
   padding: 19px 0px;
@@ -1257,6 +1332,29 @@ body {
   }
   .footer__column-header {
     font-size: 2.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .header__top {
+    margin-top: 0px;
+  }
+  .nav {
+    font-size: 1.4rem;
+  }
+  .nav__list-item {
+    margin-right: 0.5%;
+  }
+  .header__inner {
+    height: 600px;
+  }
+  .header__content {
+    margin-top: 230px;
+  }
+  .header__title {
+    font-size: 4.5rem;
+  }
+  .header__btn {
+    margin-top: 80px;
   }
 }
 @media (max-width: 321px) {

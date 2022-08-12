@@ -7,7 +7,6 @@ body {
 }
 .header {
   width: 100%;
-
   &__inner {
     background: url("../../img/header/backImg.png"), $overlayColor;
     background-blend-mode: multiply;
@@ -33,10 +32,10 @@ body {
     // margin-right: 11.328125%;
   }
   &__nav {
-    // float: left;
-    position: absolute;
+    float: left;
+    // position: absolute;
     // margin-left: 14.796875%;
-    right: 30px;
+    // right: 30px;
     // margin-top: 72px;
   }
   &__content {
@@ -72,9 +71,13 @@ body {
     max-width: 100%;
     max-height: 61px;
   }
+  &_disabled {
+    display: none;
+  }
 }
 .nav {
-  width: 76.875%;
+  width: 87.875%;
+  // width: 100%;
   font-size: 1.8rem;
   font-weight: 400;
   text-align: right;
@@ -83,12 +86,37 @@ body {
     margin-left: 0;
     padding: 0;
     clear: both;
-  }
+    text-align: center;
+    &_full {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      right: 0;
+      background-color: rgb(17, 13, 44);
+      top: 0px;
+      bottom: 0px;
+      z-index: 1000;
+      overflow: scroll;
+      font-size: 2rem;
+      padding: 20px 0;
+    }
 
+    &_disabled {
+      display: none;
+    }
+  }
+  &_full {
+  }
   &__list-item {
     float: left;
     list-style-type: none;
     margin-right: 2.889430894308943%;
+
+    &_full {
+      float: none;
+      margin-right: 0;
+    }
   }
   &__list-item:last-child {
     margin-right: 0;
@@ -99,6 +127,69 @@ body {
     color: $textHeaderColor;
     text-decoration: none;
     cursor: pointer;
+  }
+}
+
+// STYLES FOR GAMBURGER
+.gamburger {
+  // background: #fff;
+  // float: right;
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  width: 45px;
+  height: 36px;
+  z-index: 2000;
+  // margin-right: 20px;
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__span {
+    width: 45px;
+    height: 7px;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 7px;
+    transition: top 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  }
+  &__item1 {
+    top: 0px;
+
+    &_transform {
+      top: 14px;
+      opacity: 0;
+    }
+  }
+  &__item2 {
+    top: 14px;
+    &_transform {
+      transform: rotate(-45deg);
+    }
+  }
+  &__item3 {
+    top: 14px;
+    &_transform {
+      transform: rotate(45deg);
+    }
+  }
+  &__item4 {
+    top: 28px;
+    &_transform {
+      top: 14px;
+      opacity: 0;
+    }
+  }
+
+  &_disabled {
+    display: none;
+  }
+  &_opened {
+    // position: fixed;
+    // top: 35px;
   }
 }
 
