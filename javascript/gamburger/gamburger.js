@@ -8,7 +8,7 @@ let logo = document.querySelector(".logo");
 class Gamburger {
   constructor(gamburgerElement) {
     this.gamburgerElement = gamburgerElement;
-    this.isActive = false;
+    this.isActiveModalWindow = false;
     // this.gamburgerElement = this.gamburgerElement.bind(this);
     this.toFollow = this.toFollow.bind(this);
     this.gamburgerElement.addEventListener("click", this.toFollow);
@@ -28,6 +28,8 @@ class Gamburger {
     navList.classList.add("nav__list_full");
     document.body.style.overflow = "hidden";
     this.gamburgerElement.classList.add("gamburger_opened");
+    navList.classList.remove("nav__list_disabled");
+    this.isActiveModalWindow = true;
   }
   closeModalWindow() {
     let i;
@@ -43,18 +45,17 @@ class Gamburger {
     navList.classList.remove("nav__list_full");
     document.body.style.overflow = "";
     this.gamburgerElement.classList.remove("gamburger_opened");
+    navList.classList.add("nav__list_disabled");
+    this.isActiveModalWindow = false;
   }
   toFollow(event) {
+    console.log(!gamburgerElement.contains(event.target));
     if (!gamburgerElement.contains(event.target)) return;
 
-    if (this.isActive) {
+    if (this.isActiveModalWindow) {
       this.closeModalWindow();
-      navList.classList.add("nav__list_disabled");
-      this.isActive = false;
     } else {
       this.openModalWindow();
-      navList.classList.remove("nav__list_disabled");
-      this.isActive = true;
     }
   }
 }
@@ -63,5 +64,5 @@ let gamburger = new Gamburger(gamburgerElement);
 
 navList.addEventListener("click", function removeModalWindow(event) {
   if (event.target.tagName !== "A") return;
-  gamburger.closeModalWindow();
+  if (gamburger.isActiveModalWindow) gamburger.closeModalWindow();
 });

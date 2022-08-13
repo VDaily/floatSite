@@ -27,7 +27,7 @@ function sortSizes(sizes) {
 class Responsive {
   constructor(sizes) {
     this.widthHTML = document.documentElement.clientWidth;
-    this.isActiveGamburger = false;
+    this.isActiveIconGamburger = false;
     this.sizes = sizes;
     this.toSelectTypeNav = this.toSelectTypeNav.bind(this);
     this.toSelectTypeNav();
@@ -38,20 +38,21 @@ class Responsive {
     this.widthHTML = document.documentElement.clientWidth;
     let burger, nav;
 
-    if (this.widthHTML > this.sizes.md) this.isActiveGamburger = false;
-    if (this.isActiveGamburger) return;
+    if (this.widthHTML > this.sizes.md) this.isActiveIconGamburger = false;
+    if (this.isActiveIconGamburger) return;
     burger = document.querySelector(".gamburger");
     nav = document.querySelector(".nav__list");
 
     if (this.widthHTML < this.sizes.md) {
       burger.classList.remove("gamburger_disabled");
       nav.classList.add("nav__list_disabled");
-      this.isActiveGamburger = true;
+
+      this.isActiveIconGamburger = true;
     } else {
       burger.classList.add("gamburger_disabled");
       nav.classList.remove("nav__list_disabled");
-      gamburger.closeModalWindow();
-      this.isActiveGamburger = false;
+      if (gamburger.isActiveModalWindow) gamburger.closeModalWindow();
+      this.isActiveIconGamburger = false;
     }
   }
 }
