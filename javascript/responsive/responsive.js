@@ -2,56 +2,56 @@ let sizes = {
   xxs: 0,
   xs: 319.98,
   sm: 575.98,
+  xxl: 1399.98,
   md: 767.98,
   lg: 991.98,
   xl: 1199.98,
-  xxl: 1399.98,
 };
 
-let arrSizes = sortSizes(sizes);
-
-// Переводим объект в массив и сортируем его по возрастанию.
-function sortSizes(sizes) {
-  return Object.entries(sizes).sort((a, b) => {
-    return a[1] - b[1];
-  });
-}
-// function getCurrentSize(arrSizes, widthHTML) {
-//   arrSizes.forEach((elem, index) => {
-//     if (!arrSizes[index + 1]) return;
-//     if (widthHTML > elem[1]) currentSize = arrSizes[index + 1][0];
-//   });
-//   return currentSize;
-// }
-
 class Responsive {
-  constructor(sizes) {
+  constructor(objectSizes) {
     this.widthHTML = document.documentElement.clientWidth;
     this.isActiveIconGamburger = false;
-    this.sizes = sizes;
+    // Переводим объект в массив и сортируем его по возрастанию. На случай, если мы ошибёмся и значения свойств объекта будут не отсортированы.
+    // Возвращаем новый объект с отсортированными свойствами по возрастанию.
+    this.objectSizes = this.sortSizes(objectSizes);
     this.toSelectTypeNav = this.toSelectTypeNav.bind(this);
+
+    this.nav = document.querySelector(".nav__list");
+    this.burger = document.querySelector(".gamburger");
+
     this.toSelectTypeNav();
     window.addEventListener("resize", this.toSelectTypeNav);
   }
+  sortSizes(sizes) {
+    let result = Object.entries(sizes).sort((a, b) => {
+      return a[1] - b[1];
+    });
 
+    let anotherSizesObj = {};
+    result.forEach((elem) => {
+      anotherSizesObj[elem[0]] = elem[1];
+    });
+    return anotherSizesObj;
+  }
   toSelectTypeNav() {
     this.widthHTML = document.documentElement.clientWidth;
-    let burger, nav;
 
-    if (this.widthHTML > this.sizes.md) this.isActiveIconGamburger = false;
+    if (this.widthHTML > this.objectSizes.md)
+      this.isActiveIconGamburger = false;
     if (this.isActiveIconGamburger) return;
-    burger = document.querySelector(".gamburger");
-    nav = document.querySelector(".nav__list");
 
-    if (this.widthHTML < this.sizes.md) {
-      burger.classList.remove("gamburger_disabled");
-      nav.classList.add("nav__list_disabled");
+    if (this.widthHTML < this.objectSizes.md) {
+      console.log(this);
+      this.burger.classList.remove("gamburger_disabled");
+      this.nav.classList.add("nav__list_disabled");
 
       this.isActiveIconGamburger = true;
     } else {
-      burger.classList.add("gamburger_disabled");
-      nav.classList.remove("nav__list_disabled");
       if (gamburger.isActiveModalWindow) gamburger.closeModalWindow();
+      this.burger.classList.add("gamburger_disabled");
+      this.nav.classList.remove("nav__list_disabled");
+
       this.isActiveIconGamburger = false;
     }
   }
