@@ -3,19 +3,24 @@ let arrowRight = document.querySelector(".gallery-slider__arrow-right");
 let groupItems = document.querySelector(".gallery-slider__group-items");
 let galleryItems = document.querySelectorAll(".gallery-slider__item");
 let gallerySlider = document.querySelector(".gallery-slider");
-let galleryHeightMax;
 let translateXElem = 0;
 
 let index = 0;
 
 if (!arrowLeft && !arrowRight) throw new Error("Не найдены элементы arrow");
+changeHeightGallerySlider();
 
+function changeHeightGallerySlider() {
+  let bigItem = document.querySelector(".gallery-slider__item_size-more");
+  let gallerySlider = document.querySelector(".gallery-slider");
+  let galleryHeightMax = bigItem.getBoundingClientRect().width;
+  gallerySlider.style.height = galleryHeightMax + "px";
+}
 arrowLeft.addEventListener(
   "click",
   function (event) {
     let bigItem = document.querySelector(".gallery-slider__item_size-more");
     let previousElement = bigItem.previousElementSibling;
-
     let marginRight, widthElement;
 
     if (!groupItems) return;
@@ -37,10 +42,8 @@ arrowRight.addEventListener(
   function (event) {
     let bigItem = document.querySelector(".gallery-slider__item_size-more");
     let count = galleryItems.length;
-    console.log(count);
     let marginRight, widthElement, nextElement;
     nextElement = bigItem.nextElementSibling;
-    console.log(galleryItems);
     if (!groupItems) return;
 
     if (!bigItem) return;
@@ -57,3 +60,4 @@ arrowRight.addEventListener(
   { passive: true }
 );
 class Gallery {}
+window.addEventListener("resize", changeHeightGallerySlider);

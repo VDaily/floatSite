@@ -42,7 +42,6 @@ class Responsive {
     if (this.isActiveIconGamburger) return;
 
     if (this.widthHTML < this.objectSizes.md) {
-      console.log(this);
       this.burger.classList.remove("gamburger_disabled");
       this.nav.classList.add("nav__list_disabled");
 

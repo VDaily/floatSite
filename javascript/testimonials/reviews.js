@@ -31,7 +31,6 @@ class Reviews {
     event.target.classList.add("testimonials__link_active");
     arrReviews[1].classList.add("reviews_disabled");
     arrReviews[0].classList.remove("reviews_disabled");
-    console.log("Letter");
   }
   reviewsVideo(event, arrReviews) {
     event.target.parentNode.children[0].classList.remove(

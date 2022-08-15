@@ -13,35 +13,20 @@ class Gamburger {
   }
 
   openModalWindow() {
-    let i;
-    for (let elem of gamburgerElements) {
-      elem.classList.add(`gamburger__item${i}_transform`);
-      i++;
-    }
-    for (let elem of navList.children) {
-      elem.classList.add("nav__list-item_full");
-    }
-
     logo.classList.add("logo_disabled");
     navList.classList.add("nav__list_full");
     document.body.style.overflow = "hidden";
     navList.classList.remove("nav__list_disabled");
+    console.log(gamburgerElement.className);
+    gamburgerElement.classList.add("gamburger_opened");
     this.isActiveModalWindow = true;
   }
   closeModalWindow() {
-    let i;
-    for (let elem of gamburgerElements) {
-      elem.classList.remove(`gamburger__item${i}_transform`);
-      i++;
-    }
-    for (let elem of navList.children) {
-      elem.classList.remove("nav__list-item_full");
-    }
-
     logo.classList.remove("logo_disabled");
     navList.classList.remove("nav__list_full");
     document.body.style.overflow = "";
     navList.classList.add("nav__list_disabled");
+    gamburgerElement.classList.remove("gamburger_opened");
     this.isActiveModalWindow = false;
   }
   toFollow(event) {

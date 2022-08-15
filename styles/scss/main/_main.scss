@@ -8,6 +8,7 @@ body {
 .header {
   width: 100%;
   &__inner {
+    width: 100%;
     background: url("../../img/header/backImg.svg"), $overlayColor;
     background-blend-mode: multiply;
     background-size: cover;
@@ -28,15 +29,9 @@ body {
   }
   &__logo {
     float: left;
-    // margin-top: 56px;
-    // margin-right: 11.328125%;
   }
   &__nav {
     float: left;
-    // position: absolute;
-    // margin-left: 14.796875%;
-    // right: 30px;
-    // margin-top: 72px;
   }
   &__content {
     position: absolute;
@@ -89,34 +84,31 @@ body {
     text-align: center;
     &_full {
       width: 100%;
-      height: 100%;
       position: fixed;
       left: 0;
       right: 0;
       background-color: rgb(17, 13, 44);
       top: 0px;
-      bottom: 0px;
+      bottom: -20px;
       z-index: 1000;
       overflow: scroll;
       font-size: 2rem;
       padding: 20px 0;
     }
-
     &_disabled {
       display: none;
     }
   }
-  &_full {
-  }
+
   &__list-item {
     float: left;
     list-style-type: none;
     margin-right: 2.889430894308943%;
-
-    &_full {
-      float: none;
-      margin-right: 0;
-    }
+  }
+  &__list_full &__list-item {
+    float: none;
+    line-height: 50px;
+    margin-right: 0;
   }
   &__list-item:last-child {
     margin-right: 0;
@@ -132,15 +124,12 @@ body {
 
 // STYLES FOR GAMBURGER
 .gamburger {
-  // background: #fff;
-  // float: right;
   position: absolute;
   top: 10px;
   right: 60px;
-  width: 45px;
-  height: 36px;
+  width: 35px;
+  height: 26px;
   z-index: 2000;
-  // margin-right: 20px;
 
   &__inner {
     width: 100%;
@@ -148,8 +137,8 @@ body {
     position: relative;
   }
   &__span {
-    width: 45px;
-    height: 7px;
+    width: 35px;
+    height: 5px;
     left: 0;
     position: absolute;
     background-color: #fff;
@@ -158,30 +147,29 @@ body {
   }
   &__item1 {
     top: 0px;
-
-    &_transform {
-      top: 14px;
-      opacity: 0;
-    }
+  }
+  &_opened &__item1 {
+    top: 10px;
+    opacity: 0;
   }
   &__item2 {
-    top: 14px;
-    &_transform {
-      transform: rotate(-45deg);
-    }
+    top: 10px;
+  }
+  &_opened &__item2 {
+    transform: rotate(-45deg);
   }
   &__item3 {
-    top: 14px;
-    &_transform {
-      transform: rotate(45deg);
-    }
+    top: 10px;
+  }
+  &_opened &__item3 {
+    transform: rotate(45deg);
   }
   &__item4 {
-    top: 28px;
-    &_transform {
-      top: 14px;
-      opacity: 0;
-    }
+    top: 20px;
+  }
+  &_opened &__item4 {
+    top: 14px;
+    opacity: 0;
   }
 
   &_disabled {
@@ -191,7 +179,7 @@ body {
 
 .btn {
   width: 236px;
-  padding: 19px 0px;
+  padding: 19px 0;
   color: $textBtnColor;
   background-color: $backBtn;
   border: none;
@@ -416,14 +404,14 @@ body {
     clear: both;
   }
   &__arrows {
-    width: 80px;
-    height: auto;
+    width: 13%;
+    // height: 60px;
     font-size: 1.6rem;
     position: absolute;
-    left: 46.5%;
-    bottom: 0;
+    left: 45%;
+    bottom: -35px;
     text-align: center;
-    line-height: 45px;
+    // line-height: 45px;
     color: #fff;
   }
 
@@ -456,10 +444,9 @@ body {
     padding: 0 2%;
   }
   &__arrow-left {
-    width: 47%;
-    height: auto;
-    float: left;
     border-radius: 50%;
+    padding: 7% 15%;
+    line-height: 0;
     background-color: rgba(94, 94, 94, 0.7);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     margin-right: 6%;
@@ -474,10 +461,8 @@ body {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   }
   &__arrow-right {
-    width: 47%;
-    height: auto;
     border-radius: 50%;
-    float: right;
+    padding: 7% 15%;
     background-color: rgba(94, 94, 94, 0.7);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -603,6 +588,8 @@ body {
     bottom: 0;
   }
   &__img {
+    max-width: 20px;
+    max-height: 20px;
     margin-right: 7.5%;
 
     &:last-child {
@@ -768,6 +755,7 @@ body {
   text-align: left;
   overflow: hidden;
   margin-bottom: 50px;
+  position: relative;
   &:last-child {
     margin-bottom: 0;
   }
@@ -777,9 +765,12 @@ body {
   }
   &__release {
     font-weight: 300;
+    position: absolute;
+    bottom: 10px;
   }
   &__img {
     max-width: 250px;
+    height: 100%;
     float: left;
     margin-right: 5.46875%;
   }
