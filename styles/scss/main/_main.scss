@@ -235,8 +235,11 @@ body {
     float: left;
     width: 50%;
   }
-
+  &__btns {
+    clear: left;
+  }
   &__btn {
+    float: left;
     margin-right: 50px;
   }
   &__photo {
@@ -613,7 +616,7 @@ body {
 .video {
   position: relative;
   width: 48.5%;
-  height: 350px;
+  height: auto;
   margin-right: 3%;
   border: none;
   float: left;
@@ -813,14 +816,17 @@ body {
     position: relative;
     margin-right: 70px;
     text-align: center;
-
+    &-address {
+      width: 33%;
+    }
     &-address:before {
       content: "";
       width: 30px;
       height: 40px;
       background: url("../../img/location/location-ico.svg") no-repeat;
       margin-top: -40px;
-      left: 45%;
+      left: 50%;
+      transform: translateX(-50%);
       position: absolute;
       background-size: 100%;
     }
@@ -830,9 +836,9 @@ body {
       height: 40px;
       background: url("../../img/location/phone-ico.svg") no-repeat;
       margin-top: -52px;
-      left: 45%;
+      left: 50%;
+      transform: translateX(-50%);
       position: absolute;
-      background-size: 100%;
     }
     &-email:before {
       content: "";
@@ -840,12 +846,13 @@ body {
       height: 40px;
       background: url("../../img/location/mail-ico.svg") no-repeat;
       margin-top: -46px;
-      left: 45%;
+      left: 50%;
+      transform: translateX(-50%);
       position: absolute;
       background-size: 100%;
     }
   }
-  &__span:first-child {
+  &__span-adress {
     width: 33.333%;
   }
   &__span:last-child {
